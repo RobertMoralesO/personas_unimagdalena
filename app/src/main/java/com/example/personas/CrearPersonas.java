@@ -29,6 +29,7 @@ public class CrearPersonas extends AppCompatActivity {
 			p = new Persona(ced,nom,apell);
 			p.guardar();
 			Toast.makeText(this,mensaje_guardado, Toast.LENGTH_LONG).show();
+			limpiar();
 		}
 	}
 
@@ -51,6 +52,10 @@ public class CrearPersonas extends AppCompatActivity {
 	}
 
 	public void limpiar(View v){
+		limpiar();
+	}
+
+	public void limpiar(){
 		cedula.setText("");
 		nombre.setText("");
 		apellido.setText("");
